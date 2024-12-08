@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://dd8fjmsqymy07"]
+
+[ext_resource type="Script" path="res://scripts/enemy_type.gd" id="1_no81b"]
+[ext_resource type="Texture2D" uid="uid://ef2cnbvcopfh" path="res://assets/sprites/eyeball.png" id="2_4tfda"]
+
+[resource]
+script = ExtResource("1_no81b")
+title = "eyeball"
+texture = ExtResource("2_4tfda")
+health = 100.0
+damage = 20.0

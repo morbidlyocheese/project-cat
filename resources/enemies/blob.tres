@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://bcntcutb1otdi"]
+
+[ext_resource type="Script" path="res://scripts/enemy_type.gd" id="1_3diu0"]
+[ext_resource type="Texture2D" uid="uid://ccyc0vch3awcs" path="res://assets/sprites/blob.png" id="2_iwvge"]
+
+[resource]
+script = ExtResource("1_3diu0")
+title = "blob"
+texture = ExtResource("2_iwvge")
+health = 200.0
+damage = 30.0

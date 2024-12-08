@@ -1,0 +1,115 @@
+[gd_scene load_steps=16 format=3 uid="uid://gg4ln7crh7rv"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_s11e3"]
+[ext_resource type="Texture2D" uid="uid://e6ip0t3sdgws" path="res://assets/sprites/hat.png" id="2_62rfp"]
+[ext_resource type="PackedScene" uid="uid://04e1e8ildjg7" path="res://scenes/slot.tscn" id="2_kx0jc"]
+[ext_resource type="Resource" uid="uid://cmuk8o4qifx42" path="res://resources/weapons/wand.tres" id="3_w2w55"]
+
+[sub_resource type="Animation" id="Animation_2t210"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3ugr"]
+_data = {
+"idle": SubResource("Animation_2t210")
+}
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_sut43"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_rkq4i"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nn4yl"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wa8nx"]
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_hnwvl"]
+blend_point_0/node = SubResource("AnimationNodeStateMachine_sut43")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeStateMachine_rkq4i")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeStateMachine_nn4yl")
+blend_point_2/pos = Vector2(0, -1)
+blend_point_3/node = SubResource("AnimationNodeStateMachine_wa8nx")
+blend_point_3/pos = Vector2(-1, 0)
+blend_mode = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdgvb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aml1h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drct8"]
+bg_color = Color(0.93, 0.2604, 0.34968, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqfue"]
+bg_color = Color(0.977659, 0.485038, 0.513336, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_s11e3")
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="weapons" type="HBoxContainer" parent="ui"]
+offset_left = 14.0
+offset_top = 10.0
+offset_right = 142.0
+offset_bottom = 50.0
+
+[node name="slot" parent="ui/weapons" instance=ExtResource("2_kx0jc")]
+layout_mode = 2
+weapon = ExtResource("3_w2w55")
+
+[node name="slot2" parent="ui/weapons" instance=ExtResource("2_kx0jc")]
+layout_mode = 2
+
+[node name="slot3" parent="ui/weapons" instance=ExtResource("2_kx0jc")]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e3ugr")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendSpace2D_hnwvl")
+parameters/blend_position = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_62rfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tdgvb")
+
+[node name="self_damage" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collision" type="CollisionShape2D" parent="self_damage"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_aml1h")
+
+[node name="healthbar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -36.0
+offset_top = -47.0
+offset_right = 36.0
+offset_bottom = -36.0
+theme_override_styles/background = SubResource("StyleBoxFlat_drct8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vqfue")
+value = 100.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.56, 1.56)
+
+[connection signal="body_entered" from="self_damage" to="." method="_on_self_damage_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

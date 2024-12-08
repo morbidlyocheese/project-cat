@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://d34hygutnw7wt"]
+
+[ext_resource type="Script" path="res://scripts/enemy_type.gd" id="1_0chmr"]
+[ext_resource type="Texture2D" uid="uid://vb7aq72c4u2a" path="res://assets/sprites/roundboyy.png" id="2_1ktkp"]
+
+[resource]
+script = ExtResource("1_0chmr")
+title = "roundboyy"
+texture = ExtResource("2_1ktkp")
+health = 400.0
+damage = 50.0
