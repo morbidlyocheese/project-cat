@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://bjygtptod7m1f"]
+
+[ext_resource type="Texture2D" uid="uid://c80g5vjfety3e" path="res://assets/sprites/pickups/gem.png" id="1_5l4et"]
+[ext_resource type="Script" path="res://scripts/gems.gd" id="2_abjbl"]
+
+[resource]
+script = ExtResource("2_abjbl")
+XP = 1.0
+title = "blue gem"
+icon = ExtResource("1_5l4et")
+description = "gain xp"
