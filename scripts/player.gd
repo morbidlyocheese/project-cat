@@ -48,7 +48,6 @@ func take_damage(amount):
 func _on_self_damage_body_entered(body: Node2D) -> void:
 	take_damage(body.damage)
 
-
 func _on_timer_timeout():
 	%collision.set_deferred('disabled', true)
 	%collision.set_deferred('disabled', false)
@@ -63,7 +62,6 @@ func check_XP():
 	if XP > %XP.max_value:
 		XP -= %XP.max_value
 		level += 1
-
 
 func _on_magnet_area_entered(area):
 	if area.has_method("follow"):

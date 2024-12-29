@@ -17,7 +17,6 @@ func close_option():
 	panel.hide()
 	get_tree().paused = false
 	
-
 func get_available_weapons():
 	var weapon_resource = []
 	for weapon in weapons.get_children():

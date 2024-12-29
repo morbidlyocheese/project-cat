@@ -22,6 +22,6 @@ func _physics_process(delta):
 func follow(_target : CharacterBody2D):
 	can_follow = true
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	type.activate()
 	queue_free()
