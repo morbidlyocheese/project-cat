@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oq62vefbkyxf"
-path="res://.godot/imported/wand.png-f04a1cded16047ea76432534713a282c.ctex"
+uid="uid://6jsigvwdalxv"
+path="res://.godot/imported/grass.png-91512acd7c8472262e229e053d91cc27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/wand.png"
-dest_files=["res://.godot/imported/wand.png-f04a1cded16047ea76432534713a282c.ctex"]
+source_file="res://assets/sprites/environment/grass.png"
+dest_files=["res://.godot/imported/grass.png-91512acd7c8472262e229e053d91cc27.ctex"]
 
 [params]
 

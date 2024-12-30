@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://dvjd01relgm88"]
+
+[ext_resource type="Texture2D" uid="uid://c2ku1p1h4e1j1" path="res://assets/sprites/pickups/Catnip.png" id="1_ukb38"]
+[ext_resource type="Script" path="res://scripts/gems.gd" id="2_w2fsi"]
+
+[resource]
+script = ExtResource("2_w2fsi")
+XP = 5.0
+title = "catnip"
+icon = ExtResource("1_ukb38")
+description = "gains even more xp"

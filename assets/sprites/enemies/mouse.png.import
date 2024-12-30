@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vb7aq72c4u2a"
-path="res://.godot/imported/roundboyy.png-3cda96f7494a6c8fdb96000dee5e8ef5.ctex"
+uid="uid://bjcjimi7ni57j"
+path="res://.godot/imported/mouse.png-0713efda37006f99c61cc133fde0e43f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/roundboyy.png"
-dest_files=["res://.godot/imported/roundboyy.png-3cda96f7494a6c8fdb96000dee5e8ef5.ctex"]
+source_file="res://assets/sprites/enemies/mouse.png"
+dest_files=["res://.godot/imported/mouse.png-0713efda37006f99c61cc133fde0e43f.ctex"]
 
 [params]
 

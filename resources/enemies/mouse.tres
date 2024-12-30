@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://bmmr728srtirl"]
+
+[ext_resource type="Script" path="res://resources/pickups/pickups_resource.gd" id="1_8t5jq"]
+[ext_resource type="Resource" uid="uid://bjygtptod7m1f" path="res://resources/pickups/blue gem.tres" id="2_hr83u"]
+[ext_resource type="Resource" uid="uid://dvjd01relgm88" path="res://resources/pickups/catnip.tres" id="3_tthtt"]
+[ext_resource type="Script" path="res://scripts/enemy_type.gd" id="3_vydjc"]
+[ext_resource type="Texture2D" uid="uid://bjcjimi7ni57j" path="res://assets/sprites/enemies/mouse.png" id="4_43r65"]
+
+[resource]
+script = ExtResource("3_vydjc")
+title = "mouse"
+texture = ExtResource("4_43r65")
+health = 50.0
+damage = 10.0
+drops = Array[ExtResource("1_8t5jq")]([ExtResource("2_hr83u"), ExtResource("3_tthtt")])

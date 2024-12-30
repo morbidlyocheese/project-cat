@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://resources/pickups/pickups_resource.gd" id="1_flgmk"]
 [ext_resource type="Script" path="res://scripts/enemy_type.gd" id="1_no81b"]
-[ext_resource type="Texture2D" uid="uid://ef2cnbvcopfh" path="res://assets/sprites/eyeball.png" id="2_4tfda"]
+[ext_resource type="Texture2D" uid="uid://ef2cnbvcopfh" path="res://assets/sprites/enemies/eyeball.png" id="2_4tfda"]
 [ext_resource type="Resource" uid="uid://bjygtptod7m1f" path="res://resources/pickups/blue gem.tres" id="2_ijcxd"]
 
 [resource]

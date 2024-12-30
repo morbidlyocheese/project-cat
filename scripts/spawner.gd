@@ -23,7 +23,7 @@ var second : int:
 			minute += 1
 		%Second.text = str(second).lpad(2, "0")
 
-# limits spawn count		
+# limits spawn count
 func _physics_process(_delta):
 	if get_tree().get_node_count_in_group("Enemy") < 700:
 		can_spawn = true

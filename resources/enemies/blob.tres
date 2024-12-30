@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/enemy_type.gd" id="1_3diu0"]
 [ext_resource type="Script" path="res://resources/pickups/pickups_resource.gd" id="1_jlde4"]
 [ext_resource type="Resource" uid="uid://bjygtptod7m1f" path="res://resources/pickups/blue gem.tres" id="2_5unvr"]
-[ext_resource type="Texture2D" uid="uid://ccyc0vch3awcs" path="res://assets/sprites/blob.png" id="2_iwvge"]
+[ext_resource type="Texture2D" uid="uid://ccyc0vch3awcs" path="res://assets/sprites/enemies/blob.png" id="2_iwvge"]
 
 [resource]
 script = ExtResource("1_3diu0")

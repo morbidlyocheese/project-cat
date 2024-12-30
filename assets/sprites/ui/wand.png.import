@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwnpnxv1s7ojk"
-path="res://.godot/imported/hat idle_33x33.png-3b3e023a9f218644cf4f87aa661f81ca.ctex"
+uid="uid://oq62vefbkyxf"
+path="res://.godot/imported/wand.png-b3e4d8e009a0da2609fd077d26cf7aa2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/hat idle_33x33.png"
-dest_files=["res://.godot/imported/hat idle_33x33.png-3b3e023a9f218644cf4f87aa661f81ca.ctex"]
+source_file="res://assets/sprites/ui/wand.png"
+dest_files=["res://.godot/imported/wand.png-b3e4d8e009a0da2609fd077d26cf7aa2.ctex"]
 
 [params]
 

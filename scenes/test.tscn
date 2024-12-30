@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://bq70cc687yyn7"]
 
 [ext_resource type="PackedScene" uid="uid://bbfg2hw1s14x2" path="res://scenes/spawner.tscn" id="1_48qrm"]
-[ext_resource type="Texture2D" uid="uid://6jsigvwdalxv" path="res://assets/sprites/grass.png" id="1_p7gf5"]
+[ext_resource type="Texture2D" uid="uid://6jsigvwdalxv" path="res://assets/sprites/environment/grass.png" id="1_p7gf5"]
 [ext_resource type="PackedScene" uid="uid://gg4ln7crh7rv" path="res://scenes/player.tscn" id="1_ptnpo"]
 [ext_resource type="PackedScene" uid="uid://xj0rqa1e3kwc" path="res://scenes/pickups.tscn" id="4_4at7e"]
 [ext_resource type="Resource" uid="uid://bjygtptod7m1f" path="res://resources/pickups/blue gem.tres" id="5_6m8h5"]

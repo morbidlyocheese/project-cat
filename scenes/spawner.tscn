@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbfg2hw1s14x2"]
+[gd_scene load_steps=8 format=3 uid="uid://bbfg2hw1s14x2"]
 
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="1_ssm1s"]
 [ext_resource type="PackedScene" uid="uid://cnhy2ojv2qb8s" path="res://scenes/enemy.tscn" id="2_dmk5a"]
@@ -6,11 +6,12 @@
 [ext_resource type="Resource" uid="uid://bcntcutb1otdi" path="res://resources/enemies/blob.tres" id="4_gcpld"]
 [ext_resource type="Resource" uid="uid://dd8fjmsqymy07" path="res://resources/enemies/eyeball.tres" id="5_s77wj"]
 [ext_resource type="Resource" uid="uid://d34hygutnw7wt" path="res://resources/enemies/roundboyy.tres" id="6_76vsw"]
+[ext_resource type="Resource" uid="uid://bmmr728srtirl" path="res://resources/enemies/mouse.tres" id="7_xubya"]
 
 [node name="spawner" type="Node2D"]
 script = ExtResource("1_ssm1s")
 enemy = ExtResource("2_dmk5a")
-enemy_type = Array[ExtResource("3_wfvcn")]([ExtResource("4_gcpld"), ExtResource("5_s77wj"), ExtResource("6_76vsw")])
+enemy_type = Array[ExtResource("3_wfvcn")]([ExtResource("4_gcpld"), ExtResource("5_s77wj"), ExtResource("6_76vsw"), ExtResource("7_xubya")])
 
 [node name="ui" type="CanvasLayer" parent="."]
 
