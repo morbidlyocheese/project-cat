@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var speed : float = 150
-var health : float = 100:
+var health : float = 400:
 	set(value):
 		health = value
 		%healthbar.value = value
@@ -32,6 +32,16 @@ func _physics_process(delta):
 		print(nearest_enemy.name)
 	else:
 		nearest_enemy_distance = INF
+		
+	if global_position.distance_to(get_global_mouse_position()) < 10: return
+	
+	var direction = (get_global_mouse_position() - global_position).normalized()
+	
+	if direction :
+		velocity = direction * speed
+	else:
+		velocity = Vector2.ZERO
+	move_and_slide()
 		
 	velocity = Input.get_vector("left","right","up","down") * speed
 	move_and_collide(velocity * delta)
