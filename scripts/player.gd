@@ -42,7 +42,7 @@ func _physics_process(delta):
 	#
 	#var direction = (get_global_mouse_position() - global_position).normalized()
 	#
-	#if direction :
+	#if direction:
 		#velocity = direction * speed
 	#else:
 		#velocity = Vector2.ZERO

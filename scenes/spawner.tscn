@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbfg2hw1s14x2"]
+[gd_scene load_steps=9 format=3 uid="uid://bbfg2hw1s14x2"]
 
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="1_ssm1s"]
 [ext_resource type="PackedScene" uid="uid://cnhy2ojv2qb8s" path="res://scenes/enemy.tscn" id="2_dmk5a"]
@@ -7,19 +7,20 @@
 [ext_resource type="Resource" uid="uid://dd8fjmsqymy07" path="res://resources/enemies/eyeball.tres" id="5_s77wj"]
 [ext_resource type="Resource" uid="uid://d34hygutnw7wt" path="res://resources/enemies/roundboyy.tres" id="6_76vsw"]
 [ext_resource type="Resource" uid="uid://bmmr728srtirl" path="res://resources/enemies/mouse.tres" id="7_xubya"]
+[ext_resource type="Resource" uid="uid://qfvn1nuj5ll4" path="res://resources/enemies/vase.tres" id="8_ujqhe"]
 
 [node name="spawner" type="Node2D"]
 script = ExtResource("1_ssm1s")
 enemy = ExtResource("2_dmk5a")
-enemy_type = Array[ExtResource("3_wfvcn")]([ExtResource("4_gcpld"), ExtResource("5_s77wj"), ExtResource("6_76vsw"), ExtResource("7_xubya")])
+enemy_type = Array[ExtResource("3_wfvcn")]([ExtResource("4_gcpld"), ExtResource("5_s77wj"), ExtResource("6_76vsw"), ExtResource("7_xubya"), ExtResource("8_ujqhe")])
 
 [node name="ui" type="CanvasLayer" parent="."]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ui"]
-offset_left = 538.0
-offset_top = 59.0
-offset_right = 578.0
-offset_bottom = 99.0
+offset_left = 920.0
+offset_top = 72.0
+offset_right = 962.0
+offset_bottom = 112.0
 
 [node name="Minute" type="Label" parent="ui/HBoxContainer"]
 unique_name_in_owner = true

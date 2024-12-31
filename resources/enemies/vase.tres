@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://qfvn1nuj5ll4"]
+
+[ext_resource type="Script" path="res://resources/pickups/pickups_resource.gd" id="1_unfds"]
+[ext_resource type="Resource" uid="uid://bjygtptod7m1f" path="res://resources/pickups/blue gem.tres" id="2_laq77"]
+[ext_resource type="Resource" uid="uid://dvjd01relgm88" path="res://resources/pickups/catnip.tres" id="3_ojr1q"]
+[ext_resource type="Script" path="res://scripts/enemy_type.gd" id="4_pbd8h"]
+[ext_resource type="Texture2D" uid="uid://c4gaie41hgc0x" path="res://assets/sprites/enemies/vase v1.png" id="5_ewwuc"]
+
+[resource]
+script = ExtResource("4_pbd8h")
+title = "vase"
+texture = ExtResource("5_ewwuc")
+health = 50.0
+damage = 10.0
+drops = Array[ExtResource("1_unfds")]([ExtResource("2_laq77"), ExtResource("3_ojr1q")])

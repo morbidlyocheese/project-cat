@@ -1,7 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://gg4ln7crh7rv"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_s11e3"]
-[ext_resource type="Texture2D" uid="uid://e6ip0t3sdgws" path="res://assets/sprites/player/hat.png" id="2_62rfp"]
 [ext_resource type="PackedScene" uid="uid://04e1e8ildjg7" path="res://scenes/slot.tscn" id="2_kx0jc"]
 [ext_resource type="Texture2D" uid="uid://c80g5vjfety3e" path="res://assets/sprites/pickups/gem.png" id="2_miaa0"]
 [ext_resource type="Texture2D" uid="uid://bsq30gpkps206" path="res://assets/sprites/ui/panel.png" id="3_v0kr0"]
@@ -9,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://df5mdcrnuaib0" path="res://assets/sprites/ui/under.png" id="4_rlxup"]
 [ext_resource type="Texture2D" uid="uid://c470hi7j4yjpx" path="res://assets/sprites/ui/progress.png" id="6_0f1ya"]
 [ext_resource type="Script" path="res://scripts/options.gd" id="6_lm7uo"]
+[ext_resource type="Texture2D" uid="uid://bg3ldy7aof53j" path="res://assets/sprites/player/cat.png" id="9_67hff"]
 
 [sub_resource type="Curve" id="Curve_udoea"]
 min_value = -68.27
@@ -103,10 +103,10 @@ anchor_left = 0.5
 anchor_top = 0.568
 anchor_right = 0.5
 anchor_bottom = 0.568
-offset_left = -214.0
-offset_top = -116.064
-offset_right = 218.0
-offset_bottom = 99.936
+offset_left = -148.0
+offset_top = -116.44
+offset_right = 284.0
+offset_bottom = 99.56
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_v0kr0")
@@ -147,10 +147,10 @@ layout_mode = 2
 
 [node name="XP" type="TextureProgressBar" parent="ui"]
 unique_name_in_owner = true
-offset_left = 88.0
-offset_top = 24.0
-offset_right = 2883.0
-offset_bottom = 248.0
+offset_left = 584.0
+offset_top = 33.0
+offset_right = 3379.0
+offset_bottom = 257.0
 scale = Vector2(0.355, 0.155)
 max_value = 10.0
 texture_under = ExtResource("4_rlxup")
@@ -174,10 +174,10 @@ anchor_left = 0.5
 anchor_top = 0.591
 anchor_right = 0.5
 anchor_bottom = 0.591
-offset_left = -157.0
-offset_top = -19.968
-offset_right = 158.0
-offset_bottom = 20.032
+offset_left = -91.0
+offset_top = -20.344
+offset_right = 224.0
+offset_bottom = 19.656
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("6_lm7uo")
@@ -195,7 +195,8 @@ tree_root = SubResource("AnimationNodeBlendSpace2D_hnwvl")
 parameters/blend_position = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_62rfp")
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("9_67hff")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_tdgvb")
