@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://c0e8fyknn0yhp"]
+
+[ext_resource type="Script" path="res://scripts/passive_item.gd" id="1_1vmap"]
+[ext_resource type="Texture2D" uid="uid://w8cre21f23l2" path="res://assets/sprites/passive items/armor.png" id="2_gton8"]
+[ext_resource type="Script" path="res://scripts/stats.gd" id="2_qv33k"]
+
+[sub_resource type="Resource" id="Resource_qrty6"]
+script = ExtResource("2_qv33k")
+description = "+1 armor"
+max_hp = 0.0
+recovery = 0.0
+armor = 1.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_nix1w"]
+script = ExtResource("2_qv33k")
+description = "+2 armor"
+max_hp = 0.0
+recovery = 0.0
+armor = 2.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_0o7y3"]
+script = ExtResource("2_qv33k")
+description = "+5 armor"
+max_hp = 0.0
+recovery = 0.0
+armor = 5.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_1vmap")
+upgrades = Array[ExtResource("2_qv33k")]([SubResource("Resource_qrty6"), SubResource("Resource_nix1w"), SubResource("Resource_0o7y3")])
+title = "armor"
+texture = ExtResource("2_gton8")

@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://bwfjr7135t7v3"]
+
+[ext_resource type="Script" path="res://scripts/passive_item.gd" id="1_wravo"]
+[ext_resource type="Texture2D" uid="uid://cmrw0xkqqwr6d" path="res://assets/sprites/passive items/might.png" id="2_23h4j"]
+[ext_resource type="Script" path="res://scripts/stats.gd" id="3_kriya"]
+
+[sub_resource type="Resource" id="Resource_g7lk4"]
+script = ExtResource("3_kriya")
+description = "+10% damage increase"
+max_hp = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.1
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_ysjke"]
+script = ExtResource("3_kriya")
+description = "+20% damage increase"
+max_hp = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.2
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_nhenk"]
+script = ExtResource("3_kriya")
+description = "+30% damage increase"
+max_hp = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.3
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_wravo")
+upgrades = Array[ExtResource("3_kriya")]([SubResource("Resource_g7lk4"), SubResource("Resource_ysjke"), SubResource("Resource_nhenk")])
+title = "might"
+texture = ExtResource("2_23h4j")

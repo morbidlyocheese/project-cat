@@ -1,13 +1,26 @@
 extends CharacterBody2D
 
-var speed : float = 150
+var move_speed : float = 150
 var health : float = 400:
 	set(value):
-		health = value
+		health = max(value, 0)
 		%healthbar.value = value
+var max_hp : float = 100 :
+	set(value):
+		max_hp = value
+		%healthbar.max_value = value
+var recovery : float = 0
+var armor : float = 0
+var might : float = 1.5
+var area : float = 0
+var magnet : float = 0:
+	set(value):
+		magnet = value
+		%magnet_coll.shape.radius = 50 + value
+var growth : float = 1
 
 var nearest_enemy : CharacterBody2D
-var nearest_enemy_distance : float = INF
+var nearest_enemy_distance : float = 150 + area
 
 var XP : int = 0:
 	set(value):
@@ -31,7 +44,8 @@ func _physics_process(delta):
 		nearest_enemy_distance = nearest_enemy.separation
 		print(nearest_enemy.name)
 	else:
-		nearest_enemy_distance = INF
+		nearest_enemy_distance = 150 + area
+		nearest_enemy = null
 		
 	# BUG
 	# TODO
@@ -48,16 +62,17 @@ func _physics_process(delta):
 		#velocity = Vector2.ZERO
 	#move_and_slide()
 		
-	velocity = Input.get_vector("left","right","up","down") * speed
+	velocity = Input.get_vector("left","right","up","down") * move_speed
 	move_and_collide(velocity * delta)
 	check_XP()
+	health += recovery * delta
 
 func _input(event):
 	if event.is_action_pressed("quit"):
 		get_tree().quit()
 
 func take_damage(amount):
-	health -= amount
+	health -= max(amount - armor, 0)
 	print(amount)
 
 func _on_self_damage_body_entered(body: Node2D) -> void:
@@ -69,8 +84,8 @@ func _on_timer_timeout():
 
 # gain xp
 func gain_XP(amount):
-	XP += amount
-	total_XP += amount
+	XP += amount * growth
+	total_XP += amount * growth
 
 # checks xp & increases level
 func check_XP():
@@ -78,6 +93,6 @@ func check_XP():
 		XP -= %XP.max_value
 		level += 1
 
-func _on_magnet_area_entered(area):
-	if area.has_method("follow"):
-		area.follow(self)
+func _on_magnet_area_entered(areaa):
+	if areaa.has_method("follow"):
+		areaa.follow(self)

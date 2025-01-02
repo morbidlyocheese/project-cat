@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://b8vmlr3rug07u"]
+
+[ext_resource type="Script" path="res://scripts/passive_item.gd" id="1_cvyvr"]
+[ext_resource type="Texture2D" uid="uid://b6xpfeesm3exc" path="res://assets/sprites/passive items/recovery.png" id="2_oc0y8"]
+[ext_resource type="Script" path="res://scripts/stats.gd" id="3_41pfg"]
+
+[sub_resource type="Resource" id="Resource_rmfg6"]
+script = ExtResource("3_41pfg")
+description = "+0.2 hp/sec"
+max_hp = 0.0
+recovery = 0.2
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_oo5lo"]
+script = ExtResource("3_41pfg")
+description = "+0.4 hp/sec"
+max_hp = 0.0
+recovery = 0.4
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_ruhee"]
+script = ExtResource("3_41pfg")
+description = "+0.6 hp/sec"
+max_hp = 0.0
+recovery = 0.6
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_cvyvr")
+upgrades = Array[ExtResource("3_41pfg")]([SubResource("Resource_rmfg6"), SubResource("Resource_oo5lo"), SubResource("Resource_ruhee")])
+title = "recovery"
+texture = ExtResource("2_oc0y8")

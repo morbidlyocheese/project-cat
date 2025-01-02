@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://c51aibi8ifg3s"]
+
+[ext_resource type="Script" path="res://scripts/passive_item.gd" id="1_dvnym"]
+[ext_resource type="Texture2D" uid="uid://4abxog4b0cpr" path="res://assets/sprites/passive items/area.png" id="2_byans"]
+[ext_resource type="Script" path="res://scripts/stats.gd" id="3_66jsh"]
+
+[sub_resource type="Resource" id="Resource_pnnp6"]
+script = ExtResource("3_66jsh")
+description = "+25 attack range"
+max_hp = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 25.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_bf35o"]
+script = ExtResource("3_66jsh")
+description = "+30 attack range"
+max_hp = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 30.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_jhax5"]
+script = ExtResource("3_66jsh")
+description = "+35 attack range"
+max_hp = 0.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 35.0
+magnet = 0.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_dvnym")
+upgrades = Array[ExtResource("3_66jsh")]([SubResource("Resource_pnnp6"), SubResource("Resource_bf35o"), SubResource("Resource_jhax5")])
+title = "area"
+texture = ExtResource("2_byans")

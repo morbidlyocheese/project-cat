@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://6n0rvnsyamlm"]
+
+[ext_resource type="Script" path="res://scripts/passive_item.gd" id="1_qi7aq"]
+[ext_resource type="Texture2D" uid="uid://bblhfryqd0jpj" path="res://assets/sprites/passive items/max health.png" id="2_oosr0"]
+[ext_resource type="Script" path="res://scripts/stats.gd" id="3_bj8kr"]
+
+[sub_resource type="Resource" id="Resource_qkwcp"]
+script = ExtResource("3_bj8kr")
+description = "+20 hp"
+max_hp = 20.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_8po5m"]
+script = ExtResource("3_bj8kr")
+description = "+25 hp"
+max_hp = 25.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_w6gux"]
+script = ExtResource("3_bj8kr")
+description = "+30 hp"
+max_hp = 30.0
+recovery = 0.0
+armor = 0.0
+move_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_qi7aq")
+upgrades = Array[ExtResource("3_bj8kr")]([SubResource("Resource_qkwcp"), SubResource("Resource_8po5m"), SubResource("Resource_w6gux")])
+title = "max heath"
+texture = ExtResource("2_oosr0")
