@@ -44,8 +44,13 @@ func show_option():
 	
 	var option_size = 0
 	for weapon in weapons_available:
-		if weapon.is_upgradable():
-			option_size += add_option(weapon)
+		option_size += add_option(weapon)
+		
+		if weapon.max_level_reached() and weapon.item_needed in passives_available:
+			var option_slot = OptionSlot.instantiate()
+			option_slot.item = weapon
+			add_child(option_slot)
+			option_size += 1
 	
 	for passive_item in passives_available:
 		option_size += add_option(passive_item)
@@ -61,5 +66,5 @@ func show_option():
 	for weapon in weapons_available:
 		if weapon.is_upgradable():
 			var option_slot = OptionSlot.instantiate()
-			option_slot.weapon = weapon
+			option_slot.item = weapon
 			add_child(option_slot)

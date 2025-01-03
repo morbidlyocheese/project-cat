@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Singleshot" load_steps=10 format=3 uid="uid://cmuk8o4qifx42"]
+[gd_resource type="Resource" script_class="Singleshot" load_steps=12 format=3 uid="uid://cmuk8o4qifx42"]
 
 [ext_resource type="PackedScene" uid="uid://blwn4iwkn7ar6" path="res://scenes/projectile.tscn" id="1_cmm0e"]
+[ext_resource type="Resource" uid="uid://23qso6v45641" path="res://resources/weapons/holy wand v2.tres" id="1_dx37u"]
 [ext_resource type="Script" path="res://scripts/singleshot.gd" id="2_e0uk0"]
+[ext_resource type="Resource" uid="uid://b2s4xx6vkna8x" path="res://resources/passive items/magnet.tres" id="2_lu5em"]
 [ext_resource type="Texture2D" uid="uid://oq62vefbkyxf" path="res://assets/sprites/ui/wand.png" id="3_fmhho"]
 [ext_resource type="Script" path="res://scripts/upgrade.gd" id="4_13hu8"]
 [ext_resource type="Script" path="res://scripts/upgrades/projectile_upgrade.gd" id="5_lm3pp"]
@@ -36,10 +38,12 @@ description = "+200 speed"
 
 [resource]
 script = ExtResource("2_e0uk0")
-title = "magic wand"
-texture = ExtResource("3_fmhho")
 damage = 50.0
 cooldown = 0.75
 speed = 400.0
 projectile_node = ExtResource("1_cmm0e")
 upgrades = Array[ExtResource("4_13hu8")]([SubResource("Resource_032s4"), SubResource("Resource_6apxm"), SubResource("Resource_8dw4t"), SubResource("Resource_40b1i")])
+item_needed = ExtResource("2_lu5em")
+evolution = ExtResource("1_dx37u")
+title = "magic wand"
+texture = ExtResource("3_fmhho")

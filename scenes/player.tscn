@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://b7b23d1jvujoj" path="res://scenes/passive_slot.tscn" id="3_qt18g"]
 [ext_resource type="Texture2D" uid="uid://bsq30gpkps206" path="res://assets/sprites/ui/panel.png" id="3_v0kr0"]
 [ext_resource type="Resource" uid="uid://cmuk8o4qifx42" path="res://resources/weapons/wand.tres" id="3_w2w55"]
-[ext_resource type="Resource" uid="uid://bwfjr7135t7v3" path="res://resources/passive items/might.tres" id="4_jc8lr"]
 [ext_resource type="Texture2D" uid="uid://df5mdcrnuaib0" path="res://assets/sprites/ui/under.png" id="4_rlxup"]
+[ext_resource type="Resource" uid="uid://b2s4xx6vkna8x" path="res://resources/passive items/magnet.tres" id="5_px162"]
 [ext_resource type="Texture2D" uid="uid://c470hi7j4yjpx" path="res://assets/sprites/ui/progress.png" id="6_0f1ya"]
 [ext_resource type="Script" path="res://scripts/options.gd" id="6_lm7uo"]
 [ext_resource type="Texture2D" uid="uid://bg3ldy7aof53j" path="res://assets/sprites/player/cat.png" id="9_67hff"]
@@ -99,20 +99,20 @@ lifetime = 6.55
 explosiveness = 0.04
 randomness = 0.06
 
-[node name="passive items" type="HBoxContainer" parent="ui"]
+[node name="passive_items" type="HBoxContainer" parent="ui"]
 offset_left = 24.0
 offset_top = 136.0
 offset_right = 152.0
 offset_bottom = 176.0
 
-[node name="Passive_slot" parent="ui/passive items" instance=ExtResource("3_qt18g")]
+[node name="Passive_slot" parent="ui/passive_items" instance=ExtResource("3_qt18g")]
 layout_mode = 2
-item = ExtResource("4_jc8lr")
+item = ExtResource("5_px162")
 
-[node name="Passive_slot2" parent="ui/passive items" instance=ExtResource("3_qt18g")]
+[node name="Passive_slot2" parent="ui/passive_items" instance=ExtResource("3_qt18g")]
 layout_mode = 2
 
-[node name="Passive_slot3" parent="ui/passive items" instance=ExtResource("3_qt18g")]
+[node name="Passive_slot3" parent="ui/passive_items" instance=ExtResource("3_qt18g")]
 layout_mode = 2
 
 [node name="panel" type="NinePatchRect" parent="ui"]
@@ -203,7 +203,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("6_lm7uo")
 weapons = NodePath("../weapons")
-passive_items = NodePath("../passive items")
+passive_items = NodePath("../passive_items")
 particles = NodePath("../particle")
 panel = NodePath("../panel")
 

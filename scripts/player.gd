@@ -34,10 +34,10 @@ var level : int = 1:
 		%Options.show_option()
 		
 		# leveling mechanic: max value needed after certain level achieved
-		if level >= 5:
+		if level >= 3:
+			%XP.max_value = 20
+		elif level >= 7:
 			%XP.max_value = 40
-		elif level >= 10:
-			%XP.max_value = 70
 
 func _physics_process(delta):
 	if is_instance_valid(nearest_enemy):

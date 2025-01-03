@@ -4,13 +4,13 @@ class_name PassiveItem
 @export var upgrades : Array[Stats]
 var player_reference
 
-func is_upgradabe() -> bool:
+func is_upgradable() -> bool:
 	if level <= upgrades.size():
 		return true
 	return false
 	
 func upgrade_item():
-	if not is_upgradabe():
+	if not is_upgradable():
 		return
 		
 	if player_reference == null:
