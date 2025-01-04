@@ -68,3 +68,15 @@ func show_option():
 			var option_slot = OptionSlot.instantiate()
 			option_slot.item = weapon
 			add_child(option_slot)
+
+func get_available_upgrades() -> Array[Item]:
+	var upgrades : Array[Item] = []
+	for weapon : Weapon in get_available_resource_in(weapons):
+		if weapon.is_upgradable():
+			upgrades.append(weapon)
+	
+	for passive_item : PassiveItem in get_available_resource_in(passive_items):
+		if passive_item.is_upgradable():
+			upgrades.append(passive_item)
+	
+	return upgrades

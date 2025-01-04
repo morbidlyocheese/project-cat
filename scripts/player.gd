@@ -22,6 +22,11 @@ var growth : float = 1
 var nearest_enemy : CharacterBody2D
 var nearest_enemy_distance : float = 150 + area
 
+var gold : int = 0:
+	set(value):
+		gold = value
+		%gold.text = str(value) + "g"
+
 var XP : int = 0:
 	set(value):
 		XP = value
@@ -96,3 +101,9 @@ func check_XP():
 func _on_magnet_area_entered(areaa):
 	if areaa.has_method("follow"):
 		areaa.follow(self)
+
+func gain_gold(amount):
+	gold += amount
+	
+func open_chest():
+	$ui/chest.open()
