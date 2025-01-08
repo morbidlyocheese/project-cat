@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="Gold" load_steps=3 format=3 uid="uid://d1yuyja5jbwce"]
 
 [ext_resource type="Script" path="res://resources/pickups/gold.gd" id="1_h6ue1"]
-[ext_resource type="Texture2D" uid="uid://d0ugihskgwbro" path="res://assets/sprites/ui/coin.png" id="2_f4sih"]
+[ext_resource type="Texture2D" uid="uid://dj1lo7nnldbg3" path="res://assets/sprites/pickups/coin.png" id="1_rhvwk"]
 
 [resource]
 script = ExtResource("1_h6ue1")
 gold = 5
 title = "gold"
-texture = ExtResource("2_f4sih")
+icon = ExtResource("1_rhvwk")
+description = "+5g"

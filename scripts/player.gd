@@ -19,7 +19,7 @@ var magnet : float = 0:
 		%magnet_coll.shape.radius = 50 + value
 var growth : float = 1
 
-var nearest_enemy : CharacterBody2D
+var nearest_enemy
 var nearest_enemy_distance : float = 150 + area
 
 var gold : int = 0:
@@ -47,7 +47,6 @@ var level : int = 1:
 func _physics_process(delta):
 	if is_instance_valid(nearest_enemy):
 		nearest_enemy_distance = nearest_enemy.separation
-		print(nearest_enemy.name)
 	else:
 		nearest_enemy_distance = 150 + area
 		nearest_enemy = null
@@ -78,7 +77,6 @@ func _input(event):
 
 func take_damage(amount):
 	health -= max(amount - armor, 0)
-	print(amount)
 
 func _on_self_damage_body_entered(body: Node2D) -> void:
 	take_damage(body.damage)

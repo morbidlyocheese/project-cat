@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Health" load_steps=3 format=3 uid="uid://cb74em7c1w47p"]
+
+[ext_resource type="Texture2D" uid="uid://cg5lqgmg3r54a" path="res://assets/sprites/pickups/fish.png" id="1_fft2i"]
+[ext_resource type="Script" path="res://resources/pickups/health.gd" id="2_fecgm"]
+
+[resource]
+script = ExtResource("2_fecgm")
+amount = 40
+title = "feesh"
+icon = ExtResource("1_fft2i")
+description = "+20 hp"

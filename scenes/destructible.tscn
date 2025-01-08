@@ -1,0 +1,25 @@
+[gd_scene load_steps=9 format=3 uid="uid://bcqup52g7aprx"]
+
+[ext_resource type="Texture2D" uid="uid://bfa58fk0g3vyi" path="res://assets/sprites/destructibles/vase.png" id="1_3lp4d"]
+[ext_resource type="Script" path="res://scripts/destructible.gd" id="1_5y55a"]
+[ext_resource type="Script" path="res://resources/pickups/pickups_resource.gd" id="2_0fqoo"]
+[ext_resource type="Resource" uid="uid://cb74em7c1w47p" path="res://resources/pickups/fish.tres" id="3_y78uq"]
+[ext_resource type="Resource" uid="uid://cux20k3q4h8om" path="res://resources/pickups/vacuum.tres" id="4_6rq73"]
+[ext_resource type="Resource" uid="uid://d1yuyja5jbwce" path="res://resources/pickups/gold.tres" id="4_rstif"]
+[ext_resource type="Resource" uid="uid://b03way3dawyua" path="res://resources/pickups/death.tres" id="5_lv6ik"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o1ds0"]
+radius = 8.0
+height = 32.0
+
+[node name="destructible" type="Sprite2D"]
+texture = ExtResource("1_3lp4d")
+script = ExtResource("1_5y55a")
+drops = Array[ExtResource("2_0fqoo")]([ExtResource("4_rstif"), ExtResource("4_6rq73"), ExtResource("3_y78uq"), ExtResource("5_lv6ik")])
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_o1ds0")

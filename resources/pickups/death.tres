@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Death" load_steps=3 format=3 uid="uid://b03way3dawyua"]
+
+[ext_resource type="Texture2D" uid="uid://v4sm7q8sp5fh" path="res://assets/sprites/pickups/death.png" id="1_waoxr"]
+[ext_resource type="Script" path="res://resources/pickups/death.gd" id="2_rmjh2"]
+
+[resource]
+script = ExtResource("2_rmjh2")
+title = "death"
+icon = ExtResource("1_waoxr")
+description = "ctrl + A; delete"

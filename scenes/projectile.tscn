@@ -53,5 +53,6 @@ shape = SubResource("RectangleShape2D_6yd57")
 amount = 200
 process_material = SubResource("ParticleProcessMaterial_25xyv")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_screen_exited"]

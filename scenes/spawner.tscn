@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbfg2hw1s14x2"]
+[gd_scene load_steps=10 format=3 uid="uid://bbfg2hw1s14x2"]
 
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="1_ssm1s"]
 [ext_resource type="PackedScene" uid="uid://cnhy2ojv2qb8s" path="res://scenes/enemy.tscn" id="2_dmk5a"]
+[ext_resource type="PackedScene" uid="uid://bcqup52g7aprx" path="res://scenes/destructible.tscn" id="3_sdnpd"]
 [ext_resource type="Script" path="res://scripts/enemy_type.gd" id="3_wfvcn"]
 [ext_resource type="Resource" uid="uid://bcntcutb1otdi" path="res://resources/enemies/blob.tres" id="4_gcpld"]
 [ext_resource type="Resource" uid="uid://dd8fjmsqymy07" path="res://resources/enemies/eyeball.tres" id="5_s77wj"]
@@ -12,6 +13,7 @@
 [node name="spawner" type="Node2D"]
 script = ExtResource("1_ssm1s")
 enemy = ExtResource("2_dmk5a")
+destructible = ExtResource("3_sdnpd")
 enemy_type = Array[ExtResource("3_wfvcn")]([ExtResource("4_gcpld"), ExtResource("5_s77wj"), ExtResource("6_76vsw"), ExtResource("7_xubya"), ExtResource("8_ujqhe")])
 
 [node name="ui" type="CanvasLayer" parent="."]
@@ -47,6 +49,11 @@ autostart = true
 wait_time = 9.0
 autostart = true
 
+[node name="destructible" type="Timer" parent="."]
+wait_time = 9.0
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="pattern" to="." method="_on_pattern_timeout"]
 [connection signal="timeout" from="elite" to="." method="_on_elite_timeout"]
+[connection signal="timeout" from="destructible" to="." method="_on_destructible_timeout"]

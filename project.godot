@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://assets/images/dandi.png"
 config/icon="res://assets/images/pixel_dandi.png"
 
+[autoload]
+
+SoundManager="*res://scenes/sound_manager.tscn"
+
 [display]
 
 window/size/viewport_width=1920
