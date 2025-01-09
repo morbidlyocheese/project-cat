@@ -44,4 +44,5 @@ growth = 0.0
 script = ExtResource("1_wravo")
 upgrades = Array[ExtResource("3_kriya")]([SubResource("Resource_g7lk4"), SubResource("Resource_ysjke"), SubResource("Resource_nhenk")])
 title = "might"
+icon = ExtResource("2_23h4j")
 texture = ExtResource("2_23h4j")

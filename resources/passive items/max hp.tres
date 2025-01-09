@@ -44,4 +44,5 @@ growth = 0.0
 script = ExtResource("1_qi7aq")
 upgrades = Array[ExtResource("3_bj8kr")]([SubResource("Resource_qkwcp"), SubResource("Resource_8po5m"), SubResource("Resource_w6gux")])
 title = "max heath"
+icon = ExtResource("2_oosr0")
 texture = ExtResource("2_oosr0")

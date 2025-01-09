@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Gold" load_steps=3 format=3 uid="uid://d1yuyja5jbwce"]
+[gd_resource type="Resource" script_class="Gold" load_steps=4 format=3 uid="uid://d1yuyja5jbwce"]
 
 [ext_resource type="Script" path="res://resources/pickups/gold.gd" id="1_h6ue1"]
 [ext_resource type="Texture2D" uid="uid://dj1lo7nnldbg3" path="res://assets/sprites/pickups/coin.png" id="1_rhvwk"]
+[ext_resource type="AudioStream" uid="uid://dr140ketdgqmu" path="res://assets/sounds/sfx/Coin noise - Kitty Chaos - 1-9-25.wav" id="3_nn1dt"]
 
 [resource]
 script = ExtResource("1_h6ue1")
@@ -9,3 +10,4 @@ gold = 5
 title = "gold"
 icon = ExtResource("1_rhvwk")
 description = "+5g"
+sound = ExtResource("3_nn1dt")

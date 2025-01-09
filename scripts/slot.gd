@@ -3,7 +3,7 @@ extends PanelContainer
 @export var item : Weapon:
 	set(value):
 		item = value
-		$TextureRect.texture = value.texture
+		$TextureRect.texture = value.icon
 		$cooldown.wait_time = value.cooldown
 		item.slot = self
 		

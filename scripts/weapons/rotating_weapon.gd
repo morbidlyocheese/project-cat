@@ -20,6 +20,7 @@ func add_to_player(source):
 	projectile.speed = 0
 	projectile.damage = damage
 	projectile.source = source
+	projectile.find_child("Sprite2D").texture = texture
 	projectile.hide()
 	
 	projectile_reference.append(projectile)

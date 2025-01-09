@@ -44,4 +44,5 @@ growth = 0.0
 script = ExtResource("1_dvnym")
 upgrades = Array[ExtResource("3_66jsh")]([SubResource("Resource_pnnp6"), SubResource("Resource_bf35o"), SubResource("Resource_jhax5")])
 title = "area"
+icon = ExtResource("2_byans")
 texture = ExtResource("2_byans")

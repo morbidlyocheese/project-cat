@@ -1,16 +1,20 @@
-[gd_resource type="Resource" script_class="Singleshot" load_steps=5 format=3 uid="uid://23qso6v45641"]
+[gd_resource type="Resource" script_class="Singleshot" load_steps=7 format=3 uid="uid://23qso6v45641"]
 
-[ext_resource type="PackedScene" uid="uid://blwn4iwkn7ar6" path="res://scenes/projectile.tscn" id="1_at8eh"]
-[ext_resource type="Script" path="res://scripts/weapons/singleshot.gd" id="2_ogsgf"]
-[ext_resource type="Texture2D" uid="uid://ijtlkrdohrxw" path="res://assets/sprites/ui/icon_holy-wand.png" id="3_i1wtu"]
-[ext_resource type="Script" path="res://scripts/upgrades/upgrade.gd" id="4_483hk"]
+[ext_resource type="PackedScene" uid="uid://blwn4iwkn7ar6" path="res://scenes/projectile.tscn" id="1_b662w"]
+[ext_resource type="Texture2D" uid="uid://ijtlkrdohrxw" path="res://assets/sprites/ui/icon_holy-wand.png" id="3_0w2uy"]
+[ext_resource type="Script" path="res://scripts/weapons/singleshot.gd" id="3_ipg5o"]
+[ext_resource type="Texture2D" uid="uid://cejn03w4ts1r6" path="res://assets/sprites/proj.png" id="4_jm830"]
+[ext_resource type="Script" path="res://scripts/upgrades/upgrade.gd" id="4_muv5s"]
+[ext_resource type="AudioStream" uid="uid://crohi2jof82ow" path="res://assets/sounds/sfx/attack noise - Kitty Chaos - 1-9-25.wav" id="4_xstyi"]
 
 [resource]
-script = ExtResource("2_ogsgf")
+script = ExtResource("3_ipg5o")
 damage = 20.0
 cooldown = 0.1
 speed = 500.0
-projectile_node = ExtResource("1_at8eh")
-upgrades = Array[ExtResource("4_483hk")]([])
+projectile_node = ExtResource("1_b662w")
+upgrades = Array[ExtResource("4_muv5s")]([])
+sound = ExtResource("4_xstyi")
 title = "holy wand 2"
-texture = ExtResource("3_i1wtu")
+icon = ExtResource("3_0w2uy")
+texture = ExtResource("4_jm830")

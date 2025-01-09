@@ -44,4 +44,5 @@ growth = 0.0
 script = ExtResource("1_1vmap")
 upgrades = Array[ExtResource("2_qv33k")]([SubResource("Resource_qrty6"), SubResource("Resource_nix1w"), SubResource("Resource_0o7y3")])
 title = "armor"
+icon = ExtResource("2_gton8")
 texture = ExtResource("2_gton8")
