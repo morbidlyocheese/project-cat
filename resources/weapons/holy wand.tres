@@ -1,16 +1,16 @@
-[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://dcpn3geenfean"]
+[gd_resource type="Resource" script_class="Singleshot" load_steps=5 format=3 uid="uid://23qso6v45641"]
 
-[ext_resource type="PackedScene" uid="uid://blwn4iwkn7ar6" path="res://scenes/projectile.tscn" id="1_b662w"]
-[ext_resource type="Script" path="res://scripts/weapon.gd" id="2_ikmsi"]
-[ext_resource type="Texture2D" uid="uid://ijtlkrdohrxw" path="res://assets/sprites/ui/icon_holy-wand.png" id="3_0w2uy"]
-[ext_resource type="Script" path="res://scripts/upgrade.gd" id="4_muv5s"]
+[ext_resource type="PackedScene" uid="uid://blwn4iwkn7ar6" path="res://scenes/projectile.tscn" id="1_at8eh"]
+[ext_resource type="Script" path="res://scripts/weapons/singleshot.gd" id="2_ogsgf"]
+[ext_resource type="Texture2D" uid="uid://ijtlkrdohrxw" path="res://assets/sprites/ui/icon_holy-wand.png" id="3_i1wtu"]
+[ext_resource type="Script" path="res://scripts/upgrades/upgrade.gd" id="4_483hk"]
 
 [resource]
-script = ExtResource("2_ikmsi")
-damage = 10.0
+script = ExtResource("2_ogsgf")
+damage = 20.0
 cooldown = 0.1
 speed = 500.0
-projectile_node = ExtResource("1_b662w")
-upgrades = Array[ExtResource("4_muv5s")]([])
-title = "holy wand"
-texture = ExtResource("3_0w2uy")
+projectile_node = ExtResource("1_at8eh")
+upgrades = Array[ExtResource("4_483hk")]([])
+title = "holy wand 2"
+texture = ExtResource("3_i1wtu")

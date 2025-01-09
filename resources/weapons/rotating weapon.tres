@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="RotatingWeapon" load_steps=11 format=3 uid="uid://dwy11deqjxfpc"]
+
+[ext_resource type="PackedScene" uid="uid://blwn4iwkn7ar6" path="res://scenes/projectile.tscn" id="1_q550p"]
+[ext_resource type="Script" path="res://scripts/weapons/rotating_weapon.gd" id="2_t3ur5"]
+[ext_resource type="Texture2D" uid="uid://b6kxqbowp1xnq" path="res://assets/sprites/weapons/ball spinner.png" id="3_dejb3"]
+[ext_resource type="Script" path="res://scripts/upgrades/upgrade.gd" id="4_a3ru4"]
+[ext_resource type="Script" path="res://scripts/weapons/rotating_weapon_upgrade.gd" id="5_5rqv5"]
+
+[sub_resource type="Resource" id="Resource_r2atb"]
+script = ExtResource("5_5rqv5")
+angular_speed = 0.0
+amount = 1
+damamge = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 projectile"
+
+[sub_resource type="Resource" id="Resource_tb387"]
+script = ExtResource("5_5rqv5")
+angular_speed = 90.0
+amount = 0
+damamge = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+90 speed"
+
+[sub_resource type="Resource" id="Resource_12ove"]
+script = ExtResource("5_5rqv5")
+angular_speed = 0.0
+amount = 2
+damamge = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+2 projectiles"
+
+[sub_resource type="Resource" id="Resource_cs7q6"]
+script = ExtResource("5_5rqv5")
+angular_speed = 0.0
+amount = 0
+damamge = 0.0
+damage = 3.0
+cooldown = 0.0
+description = "+3 damage"
+
+[sub_resource type="Resource" id="Resource_bnaac"]
+script = ExtResource("5_5rqv5")
+angular_speed = 0.0
+amount = 3
+damamge = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+3 projectile"
+
+[resource]
+script = ExtResource("2_t3ur5")
+angular_speed = 90
+radius = 75
+amount = 1
+damage = 40.0
+cooldown = 2.0
+speed = 0.0
+projectile_node = ExtResource("1_q550p")
+upgrades = Array[ExtResource("4_a3ru4")]([SubResource("Resource_r2atb"), SubResource("Resource_tb387"), SubResource("Resource_12ove"), SubResource("Resource_cs7q6"), SubResource("Resource_bnaac")])
+title = "ball spinner"
+texture = ExtResource("3_dejb3")

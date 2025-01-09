@@ -6,6 +6,10 @@ extends PanelContainer
 		$TextureRect.texture = value.texture
 		$cooldown.wait_time = value.cooldown
 		item.slot = self
+		
+func _physics_process(delta):
+	if item != null and item.has_method("update"):
+		item.update(delta)
 
 func _on_cooldown_timeout():
 	if item: 

@@ -15,6 +15,5 @@ extends TextureButton
 
 func _on_gui_input(event : InputEvent):
 	if event.is_action_pressed("click") and item:
-		print(item.title)
 		item.upgrade_item()
 		get_parent().close_option()

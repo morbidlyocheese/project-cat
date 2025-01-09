@@ -62,12 +62,6 @@ func show_option():
 	particles.show()
 	panel.show()
 	get_tree().paused = true
-	
-	for weapon in weapons_available:
-		if weapon.is_upgradable():
-			var option_slot = OptionSlot.instantiate()
-			option_slot.item = weapon
-			add_child(option_slot)
 
 func get_available_upgrades() -> Array[Item]:
 	var upgrades : Array[Item] = []

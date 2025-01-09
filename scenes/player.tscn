@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://gg4ln7crh7rv"]
+[gd_scene load_steps=34 format=3 uid="uid://gg4ln7crh7rv"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_s11e3"]
 [ext_resource type="PackedScene" uid="uid://04e1e8ildjg7" path="res://scenes/slot.tscn" id="2_kx0jc"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c470hi7j4yjpx" path="res://assets/sprites/ui/progress.png" id="6_0f1ya"]
 [ext_resource type="Script" path="res://scripts/options.gd" id="6_lm7uo"]
 [ext_resource type="Texture2D" uid="uid://bg3ldy7aof53j" path="res://assets/sprites/player/cat.png" id="9_67hff"]
+[ext_resource type="Resource" uid="uid://dwy11deqjxfpc" path="res://resources/weapons/rotating weapon.tres" id="10_d1eib"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dirj6"]
 animations = [{
@@ -140,6 +141,7 @@ horizontal_alignment = 2
 
 [node name="chest" type="NinePatchRect" parent="ui"]
 process_mode = 3
+visible = false
 custom_minimum_size = Vector2(500, 300)
 anchors_preset = -1
 anchor_left = 0.536
@@ -254,7 +256,7 @@ stretch_mode = 5
 [node name="particle" type="GPUParticles2D" parent="ui"]
 process_mode = 3
 visible = false
-position = Vector2(576, 8)
+position = Vector2(1024, 0)
 amount = 100
 process_material = SubResource("ParticleProcessMaterial_vpidr")
 texture = ExtResource("2_miaa0")
@@ -280,7 +282,6 @@ layout_mode = 2
 
 [node name="panel" type="NinePatchRect" parent="ui"]
 process_mode = 3
-visible = false
 custom_minimum_size = Vector2(300, 300)
 anchors_preset = -1
 anchor_left = 0.535
@@ -322,10 +323,11 @@ offset_bottom = 128.0
 
 [node name="slot" parent="ui/weapons" instance=ExtResource("2_kx0jc")]
 layout_mode = 2
-item = ExtResource("3_w2w55")
+item = ExtResource("10_d1eib")
 
 [node name="slot2" parent="ui/weapons" instance=ExtResource("2_kx0jc")]
 layout_mode = 2
+item = ExtResource("3_w2w55")
 
 [node name="slot3" parent="ui/weapons" instance=ExtResource("2_kx0jc")]
 layout_mode = 2
@@ -355,17 +357,16 @@ horizontal_alignment = 2
 [node name="Options" type="VBoxContainer" parent="ui" node_paths=PackedStringArray("weapons", "passive_items", "particles", "panel")]
 unique_name_in_owner = true
 process_mode = 3
-visible = false
 custom_minimum_size = Vector2(315, 40)
-anchors_preset = -1
-anchor_left = 0.536
-anchor_top = 0.567
-anchor_right = 0.536
-anchor_bottom = 0.567
-offset_left = -157.12
-offset_top = -20.36
-offset_right = 157.88
-offset_bottom = 19.64
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 60.0
+offset_right = 227.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("6_lm7uo")

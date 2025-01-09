@@ -58,7 +58,7 @@ func _on_timer_timeout():
 	amount(second % 10)
 
 func _on_pattern_timeout():
-	for i in range(75):
+	for i in range(105):
 		spawn(get_random_position())
 
 func _on_elite_timeout():
