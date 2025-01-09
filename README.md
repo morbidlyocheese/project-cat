@@ -1,4 +1,4 @@
-project cat(working title)
+Chaos Kitty
 ----
 bullet hell inspired by vampire survivors, brotato, halls of torment and deep rock galatic: survivors.
 
